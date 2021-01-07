@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="3" failures="0" errors="0" time="2.999">
+  <testsuite name="Unit Tests" errors="0" failures="0" skipped="0" timestamp="2021-01-07T00:24:40" time="2.262" tests="1">
+    <testcase classname="Unit Tests should be xxx" name="Unit Tests should be xxx" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="Contribution Function Tests" errors="0" failures="0" skipped="0" timestamp="2021-01-07T00:24:40" time="2.273" tests="2">
+    <testcase classname="Contribution Function Tests should be equal" name="Contribution Function Tests should be equal" time="0.002">
+    </testcase>
+    <testcase classname="Contribution Function Tests should be equal" name="Contribution Function Tests should be equal" time="0">
+    </testcase>
+  </testsuite>
+</testsuites>
