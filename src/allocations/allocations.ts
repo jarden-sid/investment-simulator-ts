@@ -1,12 +1,8 @@
 import * as R from "ramda"
 import {dot, multiply, sqrt, transpose} from "mathjs"
+import {AllocationsSim} from "./allocations.types";
 
-interface AllocationsSim {
-    sharpeRatio: number,
-    simReturn: number,
-    simRisk: number,
-    weights: number[],
-}
+
 
 
 export const _randomVectorWeights = (size: number): number[] => {
