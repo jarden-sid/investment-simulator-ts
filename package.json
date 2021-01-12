@@ -20,6 +20,7 @@
     "typescript": "^4.1.3"
   },
   "dependencies": {
+    "jstat": "^1.9.4",
     "mathjs": "^8.1.1",
     "ramda": "^0.27.1"
   }

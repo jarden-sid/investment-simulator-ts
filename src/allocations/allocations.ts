@@ -1,6 +1,6 @@
 import * as R from "ramda"
-import {dot, multiply, sqrt, transpose} from "mathjs"
 import {AllocationsSim} from "./allocations.types";
+import {investmentReturn, investmentRisk} from "../utils/utils";
 
 
 
@@ -14,9 +14,9 @@ export const _randomVectorWeights = (size: number): number[] => {
 
 export const simulatePortfolio = (returns: number[], covariance: number[][]) =>
     (weights: number[]): AllocationsSim => {
-        const rtrn = dot(returns, weights)
+        const rtrn = investmentReturn(returns, weights)
         // @ts-ignore. Vector multiplication always results in 1x1 matrix.
-        const risk: number = sqrt(multiply(multiply([weights], covariance), transpose(weights))[0])
+        const risk: number = investmentRisk(weights, covariance)
         return {
             sharpeRatio: (rtrn - 0.01) / (risk),   // fixme types
             simReturn: rtrn,
@@ -26,7 +26,7 @@ export const simulatePortfolio = (returns: number[], covariance: number[][]) =>
     }
 
 
-export const allocationsSimulation = (
+export const portfolioAllocationsSimulation = (
     annual_returns: number[],
     covariance: number[][],
     simulations: number = 1_000,

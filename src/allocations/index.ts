@@ -1,2 +1,2 @@
-export {allocationsSimulation} from './allocations'
+export {portfolioAllocationsSimulation} from './allocations'
 export * from './allocations.types'
