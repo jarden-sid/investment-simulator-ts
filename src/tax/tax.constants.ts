@@ -1,5 +1,9 @@
 import {TaxBracket} from "./tax.types";
 
+
+/**
+ * Tax brackets for NZ
+ */
 export const NZ_TAX_BRACKETS: TaxBracket[] = [
     {
         "max": 14_000,
